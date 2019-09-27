@@ -1,0 +1,32 @@
+{
+  "name": "react-progressbar-circle",
+  "version": "1.0.1",
+  "description": "progress bar component react typescript",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harish-balagoni/react-progressbar.git"
+  },
+  "keywords": [
+    "progressbar",
+    "react-progress"
+  ],
+  "author": "Harish Balagoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harish-balagoni/react-progressbar/issues"
+  },
+  "homepage": "https://github.com/harish-balagoni/react-progressbar#readme",
+  "dependencies": {
+    "@types/react": "^16.9.3",
+    "react": "^16.9.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
