@@ -1,5 +1,3 @@
-demo
-screenshot.png
-test/
 src/
-coverage/
+tsconfig.json
+package-lock.json

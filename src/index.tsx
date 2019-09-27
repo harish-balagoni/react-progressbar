@@ -4,21 +4,24 @@ interface ICircularProgressBarProps {
     sqSize: number;
     strokeWidth: number;
     percentage: number;
+    color: string;
 }
 
 interface ICircularProgressBarState {
     sqSize: number;
     strokeWidth: number;
     percentage: number;
+    color: string;
 }
 
 export default class ProgressBar extends React.Component<ICircularProgressBarProps, ICircularProgressBarState>{
     constructor(Props) {
         super(Props);
         this.state = {
-            sqSize: this.props.sqSize | 0,
-            strokeWidth: this.props.strokeWidth | 0,
-            percentage: this.props.percentage | 10
+            sqSize: this.props.sqSize || 0,
+            strokeWidth: this.props.strokeWidth || 0,
+            percentage: this.props.percentage || 10,
+            color: this.props.color || '#fdc726'
         };
     }
     render() {
@@ -32,13 +35,13 @@ export default class ProgressBar extends React.Component<ICircularProgressBarPro
             <svg
                 width={this.props.sqSize}
                 height={this.props.sqSize}
-                fill={'#ffffff'}
+                fill={'#ff000000'}
                 viewBox={viewBox}>
                 <circle
                     cx={this.props.sqSize / 2}
                     cy={this.props.sqSize / 2}
                     r={radius}
-                    stroke={'#fdc726'}
+                    stroke={this.state.color}
                     fill={'#0000'}
                     strokeWidth={`${this.props.strokeWidth + 2}px`}
                     style={{
@@ -49,7 +52,7 @@ export default class ProgressBar extends React.Component<ICircularProgressBarPro
                     cx={this.props.sqSize / 2}
                     cy={this.props.sqSize / 2}
                     r={radius - this.props.strokeWidth - 2}
-                    fill={'#61caf3'}
+                    fill={'#ff000000'}
                 />
                 <text
                     x='50%'
